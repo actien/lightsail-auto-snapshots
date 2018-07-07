@@ -5,7 +5,7 @@ set -o errexit
 days=${DAYS:-30}
 schedule=${SCHEDULE:-rate(1 day)}
 region=${REGION:-$(aws configure get region)}
-profile=${AWS_PROFILE:default}
+profile=${AWS_PROFILE:-default}
 
 bucket_name="temp-lightsail-auto-snapshots-$(openssl rand -hex 8)"
 
